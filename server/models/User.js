@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 const UserSchema = new mongoose.Schema(
   {
-    firstname: {
+    firstName: {
       type: String,
       required: true,
       min: 2,
       max: 50,
     },
-    lastname: {
+    lastName: {
       type: String,
       required: true,
       min: 2,
@@ -41,3 +41,5 @@ const UserSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+const User = mongoose.model("User", UserSchema);
+export default User;
